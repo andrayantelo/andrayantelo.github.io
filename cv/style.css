@@ -145,6 +145,10 @@ section:last-child {
 	margin-bottom: 3px;
 }
 
+ul ul {
+  padding-left: 10px;
+}
+
 .keySkills {
 	list-style-type: none;
 	-moz-column-count:3;
