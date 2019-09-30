@@ -19,54 +19,44 @@ body {
 }
 
 
-#navbar {
-  padding: 30px;
+.navbar-custom {
   background-color: var(--navbar-color);
-  position: fixed;
-  width: 100%;
-  height: 25px;
-  z-index: 11;
 }
 
-.navbar-menu {
-  text-align: right;
-}
 
-.navbar-menu li {
-  display: inline;
-  padding: 0px 50px;
-}
-
-.nav-link {
-  text-decoration: none;
+.navbar-custom .nav-link {
   color: var(--navbar-text);
 }
 
-.nav-link:hover {
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
   color: var(--theme-2nd-lightest);
 }
 
-.spacer {
-  height: 85px;
-  width: 100%;
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(172, 247, 193, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(172, 247, 193);
+} 
 
 #main-container {
   display: block;
+  width: 100%;
 }
 
 #welcome-section {
   background-color: var(--theme-2nd-lightest);
   height: 100vh;
-  overflow: hidden;
+  width: 100%;
   position: relative;
-  z-index: 1;
+
 }
 
 .intro-container {
   padding-top: 40vh;
   position: fixed;
-  z-index: 1;
   right: 0;
   left: 0;
   margin-right: auto;
@@ -81,6 +71,7 @@ body {
   text-align: center;
   font-family: 'Special Elite', cursive;
   padding: 10px;
+  font-size: 50px;
 }
 
 #projects, #contact-section {
@@ -201,17 +192,12 @@ and (max-device-width : 480px) {
   #welcome-section {
     height: 100vmax; 
   }
-  .nav-link {
-    font-size: 35px;
-  }
-  .navbar-menu li {
-    padding: 0px 70px;
-  }
-  .navbar-menu {
-    text-align: center;
-  }
   #introduce-myself, #subtitle, .section-title {
-    font-size: 55px;
+    font-size: 40px;
+    padding-top: 0;
+  }
+  .navbar-custom .nav-link {
+    font-size: 20px;
   }
   .footer {
     font-size: 25px;
@@ -220,7 +206,7 @@ and (max-device-width : 480px) {
     height: 100%;
   }
   .project-flexbox {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .project-tile {
@@ -236,12 +222,11 @@ and (max-device-width : 480px) {
 @media only screen
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
-  .nav-link {
-    font-size: 35px;
-  }
     #introduce-myself, #subtitle, .section-title {
-    font-size: 55px;
+    font-size: 45px;
+    
   }
+
   .footer {
     font-size: 25px;
   }
@@ -251,10 +236,11 @@ and (max-device-width : 1024px) {
   .project-tile {
     text-align: center;
   }
-  .project-img {
-    display: block;
-    margin: auto;
+  .project-flexbox {
+    display: flex;
+    flex-direction: column;
   }
+
 }
 
 

@@ -2,21 +2,51 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <title>Personal Portfolio</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    
 </head>
 <body>
-    <nav id="navbar">
-      <ul class="navbar-menu">
-        <li><a class="nav-link" href="#welcome-section">About</a></li>
-        <li><a class="nav-link" href="#projects">Work</a></li>
-        <li><a class="nav-link" href="#contact-section">Contact</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-custom" role="navigation">
+      <div class="container-fluid">
+          <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#welcome-section">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Work</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+              </ul>
+          </div> <!-- /.collapse navbar-collapse -->
+      </div> <!-- /.container-fluid -->
     </nav>
-    <div class="spacer"></div>
     
+    <div class="spacer"></div>
     <main class="main-container">
     
     <section id="welcome-section">
@@ -37,7 +67,7 @@
         <div class="project-tile">
           <h3><a class="project-link" href="/portfolio/tribute-page" target="_blank">Tribute page</a></h3>
           
-          <img class="project-img" style="width:65vmin;height:auto;" src="images/tribute-page.png">
+          <img class="project-img" style="width:100%; height:auto;" src="images/tribute-page.png">
 
         </div>
         
@@ -69,7 +99,7 @@
         </div>
       </div> <!--/.project-flexbox-->
     </section>
-      
+   
     <section id="contact-section">
       <h1 class="section-title" id="contact-header">Let's work together...</h1>
       
@@ -86,6 +116,7 @@
     </section>
      
     </main>
+    
     <footer class="footer">
       **This is a project portfolio featuring previous projects.<p>
       Made for <a class="footer-link" href="https://www.freecodecamp.com" target="_blank">FreeCodeCamp.</a>
