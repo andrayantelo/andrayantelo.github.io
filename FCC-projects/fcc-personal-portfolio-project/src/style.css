@@ -152,7 +152,7 @@ body {
   line-height:100px;
 }
 
-/*.social-media-list li:nth-child(1) {
+.social-media-list li:nth-child(1) {
   background: #3b5998;
 }
 
@@ -170,9 +170,6 @@ body {
 
 .social-media-list li:nth-child(5) {
   background: #55acee;
-}*/
-.social-media-list li{
-  background: black;
 }
 
 .social-media:hover {
