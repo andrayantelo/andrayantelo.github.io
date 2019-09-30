@@ -222,6 +222,7 @@ and (max-device-width : 480px) {
   .project-flexbox {
     flex-direction: column;
   }
+
   .project-tile {
     width: 100vmin;
     height: auto;
@@ -246,6 +247,13 @@ and (max-device-width : 1024px) {
   }
   .project-link {
     font-size: 35px;
+  }
+  .project-tile {
+    text-align: center;
+  }
+  .project-img {
+    display: block;
+    margin: auto;
   }
 }
 
