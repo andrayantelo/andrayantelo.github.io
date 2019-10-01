@@ -64,7 +64,7 @@ body {
 }
 
 #projects {
-  background: white;
+  background: #fffff7;
 }
 
 #introduce-myself, #subtitle, .section-title {
@@ -238,6 +238,7 @@ body {
 
 .social-media:hover {
   background: #94BFBE;
+  color: black;
   border-radius: 100%;
 }
 
