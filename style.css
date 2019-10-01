@@ -19,54 +19,44 @@ body {
 }
 
 
-#navbar {
-  padding: 30px;
+.navbar-custom {
   background-color: var(--navbar-color);
-  position: fixed;
-  width: 100%;
-  height: 25px;
-  z-index: 11;
 }
 
-.navbar-menu {
-  text-align: right;
-}
 
-.navbar-menu li {
-  display: inline;
-  padding: 0px 50px;
-}
-
-.nav-link {
-  text-decoration: none;
+.navbar-custom .nav-link {
   color: var(--navbar-text);
 }
 
-.nav-link:hover {
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
   color: var(--theme-2nd-lightest);
 }
 
-.spacer {
-  height: 85px;
-  width: 100%;
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(172, 247, 193, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(172, 247, 193);
+} 
 
 #main-container {
   display: block;
+  width: 100%;
 }
 
 #welcome-section {
   background-color: var(--theme-2nd-lightest);
   height: 100vh;
-  overflow: hidden;
+  width: 100%;
   position: relative;
-  z-index: 1;
+
 }
 
 .intro-container {
   padding-top: 40vh;
   position: fixed;
-  z-index: 1;
   right: 0;
   left: 0;
   margin-right: auto;
@@ -74,13 +64,14 @@ body {
 }
 
 #projects {
-  background: white;
+  background: #fffff7;
 }
 
 #introduce-myself, #subtitle, .section-title {
   text-align: center;
   font-family: 'Special Elite', cursive;
   padding: 10px;
+  font-size: 50px;
 }
 
 #projects, #contact-section {
@@ -97,20 +88,90 @@ body {
   justify-content: space-around;
 }
 
-.project-tile {
-  width: 400px;
-  padding: 10px;
+.project-tile .title {
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-top: 15px;
 }
 
-.project-tile h3 {
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
   text-align: center;
-  padding: 10px 0px;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom{
+  top: 80%;
 }
 
 .project-link {
   text-decoration: none;
   color: black;  
 }
+
 
 #contact-section {
   background-color: var(--contact-color);
@@ -177,12 +238,12 @@ body {
 
 .social-media:hover {
   background: #94BFBE;
+  color: black;
   border-radius: 100%;
 }
 
 .footer {
   position: relative;
-  z-index: 10;
   display: block;
   background-color: var(--contact-color);
   color: black;
@@ -195,23 +256,22 @@ body {
   color: black;
 }
 
+.footer-link:hover {
+  color: black;
+}
+
 @media only screen
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
   #welcome-section {
     height: 100vmax; 
   }
-  .nav-link {
-    font-size: 35px;
-  }
-  .navbar-menu li {
-    padding: 0px 70px;
-  }
-  .navbar-menu {
-    text-align: center;
-  }
   #introduce-myself, #subtitle, .section-title {
-    font-size: 55px;
+    font-size: 40px;
+    padding-top: 0;
+  }
+  .navbar-custom .nav-link {
+    font-size: 20px;
   }
   .footer {
     font-size: 25px;
@@ -220,8 +280,9 @@ and (max-device-width : 480px) {
     height: 100%;
   }
   .project-flexbox {
-    flex-direction: column;
+    flex-direction: row;
   }
+
   .project-tile {
     width: 100vmin;
     height: auto;
@@ -235,18 +296,25 @@ and (max-device-width : 480px) {
 @media only screen
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
-  .nav-link {
-    font-size: 35px;
-  }
     #introduce-myself, #subtitle, .section-title {
-    font-size: 55px;
+    font-size: 45px;
+    
   }
+
   .footer {
     font-size: 25px;
   }
   .project-link {
     font-size: 35px;
   }
+  .project-tile {
+    text-align: center;
+  }
+  .project-flexbox {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 

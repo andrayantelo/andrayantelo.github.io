@@ -2,21 +2,51 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <title>Personal Portfolio</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    
 </head>
 <body>
-    <nav id="navbar">
-      <ul class="navbar-menu">
-        <li><a class="nav-link" href="#welcome-section">About</a></li>
-        <li><a class="nav-link" href="#projects">Work</a></li>
-        <li><a class="nav-link" href="#contact-section">Contact</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-custom" role="navigation">
+      <div class="container-fluid">
+          <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#welcome-section">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Work</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+              </ul>
+          </div> <!-- /.collapse navbar-collapse -->
+      </div> <!-- /.container-fluid -->
     </nav>
-    <div class="spacer"></div>
     
+    <div class="spacer"></div>
     <main class="main-container">
     
     <section id="welcome-section">
@@ -33,37 +63,108 @@
     <section id="projects">
       <h2 id="projects-header" class="section-title">These are some of my projects:</h2>
       <div class="project-flexbox">
-        <div class="project-tile">
-          <h3><a class="project-link" href="https://codepen.io/andrayantelo/full/ZjMJZr/" target="_blank">Tribute page</a></h3>
-          <p data-height="265" data-theme-id="0" data-slug-hash="ZjMJZr" data-default-tab="html,result" data-user="andrayantelo" data-pen-title="FCC Tribute Page Project" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/andrayantelo/pen/ZjMJZr/">FCC Tribute Page Project</a> by Andrea (<a href="https://codepen.io/andrayantelo">@andrayantelo</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-        </div>
-        
-        
-        <div class="project-tile">
-          <h3><a class="project-link" href="https://codepen.io/andrayantelo/pen/gjqreN" target="_blank">Product Landing Page</a></h3>
           
-          <p data-height="265" data-theme-id="0" data-slug-hash="gjqreN" data-default-tab="css,result" data-user="andrayantelo" data-pen-title="FCC Product Landing Page Project" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/andrayantelo/pen/gjqreN/">FCC Product Landing Page Project</a> by Andrea (<a href="https://codepen.io/andrayantelo">@andrayantelo</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-        </div>
-        
-        <div class="project-tile">
+      <div class="project-tile">
+          <h3 class="title">Bike Racks</h3>
+          <div class="content">
+            <a class="project-link" href="#" target="_blank">
+              <div class="content-overlay"></div>
+              <img style="width:100%;height:auto;" class="content-image" src="images/bikes.png">
+              <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">Interactive Map of Bike Racks</h3>
+                      <p class="content-text">Platform for outsourcing bikerack location and quality. Flask, Leaflet, jQuery, Firebase Auth, Bootstrap</p>
+              </div> <!-- /.content-details -->
+            </a>
+          </div> <!-- /.content -->
+      </div> <!-- /.project-tile -->
           
-          <h3><a class="project-link" href="https://codepen.io/andrayantelo/pen/aaJyBZ" target="_blank">Technical Documentation Page</a></h3>
-          
-          <p data-height="265" data-theme-id="0" data-slug-hash="aaJyBZ" data-default-tab="html,result" data-user="andrayantelo" data-pen-title="FCC Technical Documentation Page Project" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/andrayantelo/pen/aaJyBZ/">FCC Technical Documentation Page Project</a> by Andrea (<a href="https://codepen.io/andrayantelo">@andrayantelo</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-        </div>
-        
-        <div class="project-tile">
-          <h3><a class="project-link" href="https://codepen.io/andrayantelo/pen/qMEjGZ" target="_blank">Survey Form</a></h3>
-          <p data-height="265" data-theme-id="0" data-slug-hash="qMEjGZ" data-default-tab="html,result" data-user="andrayantelo" data-pen-title="FCC Survey Form Project" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/andrayantelo/pen/qMEjGZ/">FCC Survey Form Project</a> by Andrea (<a href="https://codepen.io/andrayantelo">@andrayantelo</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-        </div>
-      </div> <!--/.project-flexbox-->
-    </section>
+      <div class="project-tile">
+          <h3 class="title">Checkit Calendars</h3>
+          <div class="content">
+            <a class="project-link" href="http://www.checkitcalendar.com" target="_blank">
+              <div class="content-overlay"></div>
+              <img style="width:100%;height:auto;" class="content-image" src="images/checkit.png">
+              <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">Productivity Tracker</h3>
+                      <p class="content-text">Generate a calendar and keep track of how often you partake in a habit. jQuery, Firebase RTD, Bootstrap</p>
+              </div> <!-- /.content-details -->
+            </a>
+          </div> <!-- /.content -->
+      </div> <!-- /.project-tile -->
       
+      <div class="project-tile">
+          <h3 class="title">Pomodoro GUI</h3>
+          <div class="content">
+            <a class="project-link" href="https://github.com/andrayantelo/stopwatch-py" target="_blank">
+              <div class="content-overlay"></div>
+              <img style="width:100%;height:auto;" class="content-image" src="images/pomodoro.png">
+              <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">Pomodoro App</h3>
+                      <p class="content-text">An interval timer app to help with productivity. Python3, Tkinter</p>
+              </div> <!-- /.content-details -->
+            </a>
+          </div> <!-- /.content -->
+      </div> <!-- /.project-tile -->
+          
+      <div class="project-tile">
+          <h3 class="title">Product Landing Page</h3>
+          <div class="content">
+            <a class="project-link" href="/portfolio/product-landing" target="_blank">
+              <div class="content-overlay"></div>
+              <img style="width:100%;height:auto;" class="content-image" src="images/product-landing.png">
+              <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">FCC Product Landing Project</h3>
+                      <p class="content-text">HTML5/CSS/JavaScript</p>
+              </div> <!-- /.content-details -->
+            </a>
+          </div> <!-- /.content -->
+      </div> <!-- /.project-tile -->
+      
+      <div class="project-tile">
+          <h3 class="title">Technical Documentation Page</h3>
+          <div class="content">
+            <a class="project-link" href="/portfolio/technical-documentation" target="_blank">
+              <div class="content-overlay"></div>
+              <img style="width:100%;height:auto;" class="content-image" src="images/technical-doc.png">
+              <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">FCC Technical Documentation Project</h3>
+                      <p class="content-text">HTML5/CSS</p>
+              </div> <!-- /.content-details -->
+            </a>
+          </div> <!-- /.content -->
+      </div> <!-- /.project-tile -->
+      
+      <div class="project-tile">
+          <h3 class="title">Survey Form Page</h3>
+          <div class="content">
+            <a class="project-link" href="/portfolio/survey-page" target="_blank">
+              <div class="content-overlay"></div>
+              <img style="width:100%;height:auto;" class="content-image" src="images/survey-form.png">
+              <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">FCC Survey Form Project</h3>
+                      <p class="content-text">HTML5/CSS</p>
+              </div> <!-- /.content-details -->
+            </a>
+          </div> <!-- /.content -->
+      </div> <!-- /.project-tile -->
+      
+      <div class="project-tile">
+          <h3 class="title">Tribute Page</h3>
+          <div class="content">
+            <a class="project-link" href="/portfolio/tribute-page" target="_blank">
+              <div class="content-overlay"></div>
+              <img style="width:100%;height:auto;" class="content-image" src="images/tribute-page.png">
+              <div class="content-details fadeIn-bottom">
+                  <h3 class="content-title">FCC Tribute Project</h3>
+                      <p class="content-text">HTML5/CSS</p>
+              </div> <!-- /.content-details -->
+            </a>
+          </div> <!-- /.content -->
+      </div> <!-- /.project-tile -->
+        
+        
+    </section>
+   
     <section id="contact-section">
       <h1 class="section-title" id="contact-header">Let's work together...</h1>
       
@@ -71,6 +172,7 @@
         <ul class="social-media-list">
           <!--<li><a class="social-media" href="#"><i class="fab fa-facebook-f"></i></a></li>-->
           <li><a class="social-media" href="https://github.com/andrayantelo"><i class="fab fa-github"></i></a></li>
+          <li><a class="social-media" href="mailto:andrayantelo@gmail.com"><i class="fas fa-envelope-square"></i></a></li>
           <!--<li><a class="social-media" href="#"><i class="fab fa-youtube"></i></a></li>-->
           <!--<li><a class="social-media" href="#"><i class="fab fa-linkedin-in"></i></a></li>-->
           <!--<li><a class="social-media" href="#"><i class="fab fa-twitter"></i></a></li>-->
@@ -80,9 +182,10 @@
     </section>
      
     </main>
+    
     <footer class="footer">
-      **This is a project portfolio featuring previous projects.<p>
-      Made for <a class="footer-link" href="https://www.freecodecamp.com" target="_blank">FreeCodeCamp.</a>
+      <!--**This is a project portfolio featuring previous projects.<p>
+      Made for <a class="footer-link" href="https://www.freecodecamp.com" target="_blank">FreeCodeCamp.</a> -->
       Find my freecodecamp profile <a id="profile-link" class="footer-link" href="https://www.freecodecamp.org/andrayantelo" target="_blank">here.</a>
       </p>
     </footer>
