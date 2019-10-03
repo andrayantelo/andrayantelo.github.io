@@ -293,6 +293,7 @@ and (max-device-width : 480px) {
   }
 }
 
+/* change to min-width and max-width */
 @media only screen
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
