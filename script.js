@@ -1,10 +1,12 @@
 $(document).ready(function () {
     $(document).on("scroll", onScroll);
+    $(window).on("popstate", onBackForward);
     
     //smoothscroll
     $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
         $(document).off("scroll");
+        
         
         $('a').parent().each(function () {
             $(this).removeClass('active');
@@ -15,6 +17,12 @@ $(document).ready(function () {
         var target = this.hash,
             menu = target;
         $target = $(target);
+        
+        // also add link to history when it is clicked on
+        if (history.pushState) {
+            history.pushState({url: target}, null, target);
+        }
+        
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top
         }, 500, 'swing', function () {
@@ -42,7 +50,15 @@ function onScroll(event){
                 
                 currLink.parent().addClass("active");
                 // update url with current section
-                history.pushState(null, '', '/' + refElement);
+
+                if (history.replaceState && history.state.url === refElement) {
+                    console.log('replacing url');
+                    history.replaceState({url: refElement}, '', refElement);
+                }
+                else {
+                    console.log('pushing url ' + refElement + ' onto the history stack');
+                    history.pushState({url: refElement}, '', refElement);
+                }
             }
             else{
                 currLink.parent().removeClass("active");
@@ -52,4 +68,10 @@ function onScroll(event){
     
 }
 
-function 
+function onBackForward(event) {
+    console.log("clicked back");
+    console.log(event);
+    console.log(event.state);
+    console.log(history.state); 
+  
+}
