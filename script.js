@@ -39,8 +39,10 @@ function onScroll(event){
             if ($refElement.position().top <= scrollPos && $refElement.position().top + $refElement.height() > scrollPos) {
             
                 $('#navbarNavAltMarkup ul li').removeClass("active");
-                history.pushState(null, '', '/' + refElement);
+                
                 currLink.parent().addClass("active");
+                // update url with current section
+                history.pushState(null, '', '/' + refElement);
             }
             else{
                 currLink.parent().removeClass("active");
@@ -49,3 +51,5 @@ function onScroll(event){
     });
     
 }
+
+function 
