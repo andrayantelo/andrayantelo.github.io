@@ -11,7 +11,7 @@ $(document).ready(function () {
         })
         
         $(this).parent().addClass('active');
-      
+        
         var target = this.hash,
             menu = target;
         $target = $(target);
@@ -31,6 +31,7 @@ function onScroll(event){
         var currLink = $(this);
 
         var refElement = currLink.attr("href");
+        
         if (refElement.startsWith('#')) {
             
             var $refElement = $(`${refElement}`);
@@ -38,7 +39,7 @@ function onScroll(event){
             if ($refElement.position().top <= scrollPos && $refElement.position().top + $refElement.height() > scrollPos) {
             
                 $('#navbarNavAltMarkup ul li').removeClass("active");
-
+                history.pushState(null, '', '/' + refElement);
                 currLink.parent().addClass("active");
             }
             else{
@@ -46,4 +47,5 @@ function onScroll(event){
             }
         }
     });
+    
 }
