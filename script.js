@@ -2,6 +2,8 @@ $(document).ready(function () {
     $(document).on("scroll", onScroll);
     $(window).on("popstate", onBackForward);
     
+    history.pushState({url:'#window-section'}, '', '#window-section');
+    
     //smoothscroll
     $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
