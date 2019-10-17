@@ -1,8 +1,5 @@
 $(document).ready(function () {
     $(document).on("scroll", onScroll);
-    $(window).on("popstate", onBackForward);
-    
-    history.pushState({url:'#window-section'}, '', '#window-section');
     
     //smoothscroll
     $('a[href^="#"]').on('click', function (e) {
@@ -44,23 +41,15 @@ function onScroll(event){
         
         if (refElement.startsWith('#')) {
             
-            var $refElement = $(`${refElement}`);
-            
+            var $refElement = $(refElement);
             if ($refElement.position().top <= scrollPos && $refElement.position().top + $refElement.height() > scrollPos) {
             
                 $('#navbarNavAltMarkup ul li').removeClass("active");
                 
                 currLink.parent().addClass("active");
                 // update url with current section
+                history.replaceState({url: refElement}, '', refElement);
 
-                if (history.replaceState && history.state.url === refElement) {
-                    console.log('replacing url');
-                    history.replaceState({url: refElement}, '', refElement);
-                }
-                else {
-                    console.log('pushing url ' + refElement + ' onto the history stack');
-                    history.pushState({url: refElement}, '', refElement);
-                }
             }
             else{
                 currLink.parent().removeClass("active");
@@ -70,10 +59,3 @@ function onScroll(event){
     
 }
 
-function onBackForward(event) {
-    console.log("clicked back");
-    console.log(event);
-    console.log(event.state);
-    console.log(history.state); 
-  
-}
