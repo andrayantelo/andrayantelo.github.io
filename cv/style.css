@@ -163,6 +163,9 @@ ul ul {
 	margin-bottom: 3px;
 }
 
+i {
+	padding-right: 3px;
+}
 @media all and (min-width: 602px) and (max-width: 800px) {
 	#headshot {
 		display: none;
