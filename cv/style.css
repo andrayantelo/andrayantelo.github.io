@@ -241,7 +241,13 @@ i {
 @media print {
     #cv {
         width: 100%;
-    }
+	}
+	#headshot {
+		display: none;
+	}
+	.contactMethods ul li {
+		text-align: right;
+	}
 }
 
 @-webkit-keyframes reset {
