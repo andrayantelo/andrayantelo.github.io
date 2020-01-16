@@ -245,9 +245,6 @@ i {
 	#headshot {
 		display: none;
 	}
-	.contactMethods ul li {
-		text-align: right;
-	}
 }
 
 @-webkit-keyframes reset {
